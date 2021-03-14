@@ -15,8 +15,7 @@ setupForest = []
 setupSpecEvent = []
 
 # Prompt Number of Players
-print('How many players are playing? 1, 2, 3, or 4?')
-numPlayers = int(input())
+numPlayers = int(input('How many players are playing? 1, 2, 3, or 4?\n'))
 
 # Randomly Generate Forest Locations
 randForestIndex = random.randint(0, len(allForest)-1)
