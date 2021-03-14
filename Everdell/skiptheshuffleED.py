@@ -1,5 +1,4 @@
 ## Program to set up Everdell without shuffling
-
 import random
 
 # List of All Everdell Base Forest Locations
