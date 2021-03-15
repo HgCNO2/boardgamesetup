@@ -14,7 +14,25 @@ setupForest = []
 setupSpecEvent = []
 
 # Prompt Number of Players
-numPlayers = int(input('How many players are playing? 1, 2, 3, or 4?\n'))
+
+def get_int_input(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+        except ValueError:
+        	time.sleep(0.3)
+        	print("Incorrect command. Please try again")
+        	continue
+
+        if type(value) != int:
+        	time.sleep(0.3)
+        	print("Incorrect command. Please try again")
+        	continue
+        else:
+            break
+    return value
+
+numPlayers = get_int_input('How many players are playing? 1, 2, 3, or 4?\n'))
 
 # Randomly Generate Forest Locations
 randForestIndex = random.randint(0, len(allForest)-1)
