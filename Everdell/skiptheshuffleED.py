@@ -37,3 +37,4 @@ while len(setupSpecEvent) < 4:
     allSpecEvent.pop(randSpecEventIndex)
     randSpecEventIndex = random.randint(0, len(allSpecEvent)-1)
 print('\nYour special events are: \n--' + '\n--'.join(setupSpecEvent))
+input('Enjoy the game!\nPress ENTER to exit.')
