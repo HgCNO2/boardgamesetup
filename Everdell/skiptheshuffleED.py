@@ -26,3 +26,4 @@ print('\nYour forest locations are: \n--' + '\n--'.join(setupForest))
 # Randomly Generate Special Events
 setupSpecEvent = random.sample(allSpecEvent, k=4)
 print('\nYour special events are: \n--' + '\n--'.join(setupSpecEvent))
+input('\nEnjoy the game!\nPress ENTER to exit.')
