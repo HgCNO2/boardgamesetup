@@ -2,7 +2,7 @@
 import random
 
 # List of All Everdell Base Forest Locations
-allForest = ['Copy any basic action on the board', 'Discard any resource, then Draw 2 for every card discarded', 'Discard up to 3 cards & gain 1 of any resource for each card', 'Draw 2 Meadow cards & play 1 for -1 of any resource', '1 Twig, 1 Resin, 1 Berry', '3 Berries', '3 Cards & 1 Pebble', '2 of Any Resource', '2 Berries & 1 Card', '2 Cards & 1 of Any Resource', '2 Resin & 1 Twig']
+allForest = ['Copy any basic action on the board & 1 card', 'Discard any resource, then Draw 2 for every card discarded', 'Discard up to 3 cards & gain 1 of any resource for each card', 'Draw 2 Meadow cards & play 1 for -1 of any resource', '1 Twig, 1 Resin, 1 Berry', '3 Berries', '3 Cards & 1 Pebble', '2 of Any Resource', '2 Berries & 1 Card', '2 Cards & 1 of Any Resource', '2 Resin & 1 Twig']
 
 # List of All Everdell Base Special Events
 allSpecEvent = ['Remembering the Fallen', 'A Well Run City', 'Capture of the Acorn Thieves', 'Flying Doctor Service', 'Ancient Scrolls Discovered', 'Performer in Residence', 'Tax Relief', 'Path of the Pilgrims', 'Ministering to Miscreants', 'Under New Management', 'A Brilliant Marketing Plan', 'Graduation of Scholars', 'An Evening of Fireworks', 'The Everdell Games', 'Croak Wart Cure', 'Pristine Chapel Ceiling']
