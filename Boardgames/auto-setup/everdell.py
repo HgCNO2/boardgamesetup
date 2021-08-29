@@ -12,7 +12,7 @@ import random
 st.set_page_config('Everdell Automatic Game Setup by HgCNO2')
 
 # Set database path
-db_path = r'C:/Eric/Coding/Python/Games/Boardgames/auto-setup/gamessqlite.db'
+db_path = r'https://github.com/HgCNO2/game-projects/blob/master/Boardgames/auto-setup/gamessqlite.db'
 
 # Create set of game series to select from
 series = set()
