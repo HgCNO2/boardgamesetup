@@ -9,7 +9,7 @@ import pandas as pd
 import streamlit as st
 import random
 
-st.set_page_config('Everdell Automatic Game Setup by HgCNO2')
+st.set_page_config('Everdell Automatic Game Setup by HgCNO2', page_icon="https://cf.geekdo-static.com/mbs/mb_43422_0.png")
 
 # Set database path
 db_path = st.secrets['sqlite']
