@@ -15,9 +15,6 @@ db_path = st.secrets['sqlite']
 def run(game_series='Everdell'):
     selected_series = game_series
 
-    # Headline for the game series
-    st.header(f'Set up your game of {game_series}')
-
     # Pull data for games & expansions
     with sql.connect(**db_path) as conn:
         games_expansions = pd.read_sql(f"SELECT * FROM games WHERE series='{selected_series}'", conn)

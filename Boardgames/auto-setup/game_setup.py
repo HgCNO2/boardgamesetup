@@ -14,6 +14,9 @@ st.set_page_config('Automatically Setup Your Boardgames | HgCNO2 Short Automaton
 # Set database path
 db_path = st.secrets['sqlite']
 
+# Write Header for section
+st.header('Choose your adventure.', anchor=None)
+
 # Create list of game series to select from
 series = []
 with sql.connect(**db_path) as conn:
@@ -24,5 +27,8 @@ series.sort()
 # Display series to user in a GUI dropdown to be selected
 selected_series = st.selectbox("Please select the game series you're playing", series)
 game = importlib.import_module(selected_series.lower().replace(' ', '_'))
+
+# Headline for the game series
+st.header(f'Set up your game of {game_series}', anchor=None)
 
 game.run(selected_series)
