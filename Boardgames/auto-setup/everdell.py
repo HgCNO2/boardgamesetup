@@ -9,6 +9,8 @@ import pandas as pd
 import streamlit as st
 import random
 
+db_path = st.secrets['sqlite']
+
 def run(game_series='Everdell'):
     selected_series = game_series
 
