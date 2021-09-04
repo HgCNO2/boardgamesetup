@@ -3,7 +3,7 @@ import pandas as pd
 import sqlite3 as sql
 import random
 
-db_path = st.secrets['database']
+db_path = st.secrets['sqlite']
 
 
 def run(game_series='Robinson Crusoe'):
