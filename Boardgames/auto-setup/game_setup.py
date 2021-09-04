@@ -15,7 +15,7 @@ st.set_page_config('Automatically Setup Your Boardgames | HgCNO2 Short Automaton
 db_path = st.secrets['sqlite']
 
 # Write Header for section
-st.header('Choose Your Adventure', anchor=None)
+st.header('Choose Your Universe', anchor=None)
 
 # Create list of game series to select from
 series = []
