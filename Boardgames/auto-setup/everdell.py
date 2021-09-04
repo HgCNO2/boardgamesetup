@@ -94,6 +94,10 @@ event_string = '**Your Special Events are:**'
 for event in special_events:
     event_string += f'  \n| {event} |'
 
+import robinsoncrusoe
+
+robinsoncrusoe.test()
+
 if submit_button:
     st.markdown(worker_string)
     st.markdown(forest_string)
