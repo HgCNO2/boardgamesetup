@@ -88,7 +88,7 @@ def run(game_series='Robinson Crusoe'):
     with st.form(key='my_form'):
         submit_button = st.form_submit_button(label='Run Game Setup')
 
-    wreckage_string = f'**Your wreckage card is:**\n| {wreckage} |'
+    wreckage_string = f'**Your wreckage card is:**  \n| {wreckage} |'
 
     player = 1
     character_string = '**Your character assignments are:**'
