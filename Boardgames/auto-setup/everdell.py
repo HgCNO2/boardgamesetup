@@ -25,7 +25,7 @@ series.sort()
 # Display series to user in a GUI dropdown to be selected
 selected_series = st.selectbox("Please select the game series you're playing", series)
 
-game = importlib.import_module(selected_series)
+game = importlib.import_module(selected_series.strip())
 
 game.test()
 
