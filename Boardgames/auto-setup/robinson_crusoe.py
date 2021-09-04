@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-def run():
+def run(game_series='Robinson Crusoe'):
     st.write('Test import works')
     return None
 
