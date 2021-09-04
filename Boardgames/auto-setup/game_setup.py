@@ -26,6 +26,8 @@ series.sort()
 
 # Display series to user in a GUI dropdown to be selected
 selected_series = st.selectbox("Please select the game series you're playing", series)
+
+# Import module for the selected series and set it equal to game
 game = importlib.import_module(selected_series.lower().replace(' ', '_'))
 
 # Headline for the game series
