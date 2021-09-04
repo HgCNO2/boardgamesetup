@@ -5,13 +5,11 @@ Created on Sat Aug 21 11:47:59 2021
 @author: HgCNO2
 """
 import sqlite3 as sql
-import pandas as pd
 import streamlit as st
-import random
 import importlib
 
 st.set_page_config('Automatically Setup Your Boardgames | HgCNO2 Short Automaton',
-                   page_icon="https://cf.geekdo-static.com/mbs/mb_43422_0.png")
+                   page_icon="https://cf.geekdo-static.com/mbs/mb_5834_0.gif")
 
 # Set database path
 db_path = st.secrets['sqlite']

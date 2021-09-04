@@ -11,8 +11,12 @@ import random
 
 db_path = st.secrets['sqlite']
 
+
 def run(game_series='Everdell'):
     selected_series = game_series
+
+    # Headline for the game series
+    st.header(f'Set up your game of {game_series}')
 
     # Pull data for games & expansions
     with sql.connect(**db_path) as conn:
@@ -42,12 +46,10 @@ def run(game_series='Everdell'):
     with sql.connect(**db_path) as conn:
         component_table = pd.read_sql(joined_call, conn)
 
-
     # Create shuffler function
     def shuffler(component_type, cards_to_deal):
         return random.sample(list(component_table[component_table['comp_type'] == component_type]['comp_name']),
                              cards_to_deal)
-
 
     # Shuffle Workers
     workers = shuffler('Worker', num_players)
@@ -88,6 +90,7 @@ def run(game_series='Everdell'):
         st.markdown(worker_string)
         st.markdown(forest_string)
         st.markdown(event_string)
+
 
 if __name__ == "__main__":
     run()
