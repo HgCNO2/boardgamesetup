@@ -17,7 +17,7 @@ def run(game_series='Robinson Crusoe'):
     # Show all of the games & expansions for the selected series with on/off toggles
     selected_games = st.multiselect('Which games and expansions are you playing today?',
                                     games_expansions['game_name'],
-                                    #default='Robinson Crusoe: Adventures on the Cursed Island'
+                                    default='Robinson Crusoe: Adventures on the Cursed Island'
                                     )
 
     # Get number of players
