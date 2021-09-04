@@ -13,8 +13,8 @@ db_path = st.secrets['sqlite']
 
 
 # Create shuffler function
-def shuffler(component_type, cards_to_deal):
-    return random.sample(list(component_table[component_table['comp_type'] == component_type]['comp_name']),
+def shuffler(component_type, cards_to_deal, comp_table=component_table):
+    return random.sample(list(comp_table[comp_table['comp_type'] == component_type]['comp_name']),
                          cards_to_deal)
 
 
