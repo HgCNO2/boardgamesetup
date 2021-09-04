@@ -12,6 +12,12 @@ import random
 db_path = st.secrets['sqlite']
 
 
+# Create shuffler function
+def shuffler(component_type, cards_to_deal):
+    return random.sample(list(component_table[component_table['comp_type'] == component_type]['comp_name']),
+                         cards_to_deal)
+
+
 def run(game_series='Everdell'):
     selected_series = game_series
 
@@ -45,11 +51,6 @@ def run(game_series='Everdell'):
     # Join tables to add all of the components for the selected games
     with sql.connect(**db_path) as conn:
         component_table = pd.read_sql(joined_call, conn)
-
-    # Create shuffler function
-    def shuffler(component_type, cards_to_deal):
-        return random.sample(list(component_table[component_table['comp_type'] == component_type]['comp_name']),
-                             cards_to_deal)
 
     # Shuffle Workers
     workers = shuffler('Worker', num_players)
