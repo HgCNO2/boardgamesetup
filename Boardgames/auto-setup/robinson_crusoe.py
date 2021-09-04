@@ -78,7 +78,8 @@ def run(game_series='Robinson Crusoe'):
             pass
 
     inventions = random.sample(inventions, 5)
-    inventions.append(default_inventions)
+    for item in default_inventions:
+        inventions.append(item)
 
     # Create button to run the setup
     with st.form(key='my_form'):
