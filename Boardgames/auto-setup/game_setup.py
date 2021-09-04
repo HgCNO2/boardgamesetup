@@ -29,6 +29,6 @@ selected_series = st.selectbox("Please select the game series you're playing", s
 game = importlib.import_module(selected_series.lower().replace(' ', '_'))
 
 # Headline for the game series
-st.header(f'Set up your game of {game_series}', anchor=None)
+st.header(f'Set up your game of {selected_series}', anchor=None)
 
 game.run(selected_series)
