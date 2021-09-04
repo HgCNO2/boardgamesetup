@@ -9,9 +9,6 @@ db_path = st.secrets['sqlite']
 def run(game_series='Robinson Crusoe'):
     selected_series = game_series
 
-    # Headline for the game series
-    st.header(f'Set up your game of {game_series}')
-
     # Pull data for games & expansions
     with sql.connect(**db_path) as conn:
         games_expansions = pd.read_sql(f"SELECT * FROM games WHERE series='{selected_series}'", conn)
@@ -20,7 +17,7 @@ def run(game_series='Robinson Crusoe'):
     # Show all of the games & expansions for the selected series with on/off toggles
     selected_games = st.multiselect('Which games and expansions are you playing today?',
                                     games_expansions['game_name'],
-                                    default='Robinson Crusoe')
+                                    default='Robinson Crusoe: Adventures on the Cursed Island')
 
     # Get number of players
     num_players = st.selectbox("How many players are playing?", range(1, 5))
