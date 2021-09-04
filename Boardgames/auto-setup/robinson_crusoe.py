@@ -70,7 +70,12 @@ def run(game_series='Robinson Crusoe'):
                             'Sailor': 'Raft'}
 
     for character in characters:
-        inventions.remove(character_inventions[character])
+        try:
+            inventions.remove(character_inventions[character])
+        except KeyError:
+            pass
+        except ValueError:
+            pass
 
     inventions = random.sample(inventions, 5)
     inventions.append(default_inventions)
