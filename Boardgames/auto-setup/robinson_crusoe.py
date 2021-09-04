@@ -56,7 +56,7 @@ def run(game_series='Robinson Crusoe'):
                 characters = random.sample(characters, num_players)
 
     # Shuffle Starting Equipment
-    wreckage = shuffler('Wreckage', 1)
+    wreckage = shuffler('Wreckage', 1)[0]
 
     # Shuffle Starting Equipment
     starting_equipment = shuffler('Starting Equipment', 2)
@@ -88,7 +88,7 @@ def run(game_series='Robinson Crusoe'):
     with st.form(key='my_form'):
         submit_button = st.form_submit_button(label='Run Game Setup')
 
-    wreckage_string = f'**Your wreckage card is:**\n{wreckage}'
+    wreckage_string = f'**Your wreckage card is:**\n| {wreckage} |'
 
     player = 1
     character_string = '**Your character assignments are:**'
