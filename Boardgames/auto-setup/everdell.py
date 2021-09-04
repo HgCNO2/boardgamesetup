@@ -8,7 +8,6 @@ import sqlite3 as sql
 import pandas as pd
 import streamlit as st
 import random
-import importlib
 
 st.set_page_config('Everdell Automatic Game Setup by HgCNO2', page_icon="https://cf.geekdo-static.com/mbs/mb_43422_0.png")
 
@@ -24,10 +23,6 @@ series.sort()
 
 # Display series to user in a GUI dropdown to be selected
 selected_series = st.selectbox("Please select the game series you're playing", series)
-st.write(selected_series.lower().replace(' ', '_'))
-game = importlib.import_module(selected_series.lower().replace(' ', '_'))
-
-game.test()
 
 # Pull data for games & expansions
 with sql.connect(**db_path) as conn:
